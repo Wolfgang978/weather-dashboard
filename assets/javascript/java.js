@@ -71,7 +71,7 @@ const fetchFunction = function () {
           currentCity1.textContent = `Temp: ${data.list[0].main.temp} °F`
           currentCity2.textContent = `Wind: ${data.list[0].wind.speed} MPH`
           currentCity3.textContent = `Humidity: ${data.list[0].main.humidity}`
-          currentCity4.textContent = `Feels like: ${data.list[0].main.feels_like}`
+          currentCity4.textContent = `Feels like: ${data.list[0].main.feels_like} °F`
           if (data.list[0].main.feels_like > 80) {
             currentCity4.setAttribute("class", "currentCity4 red")
           } else if (data.list[0].main.feels_like < 50) {
