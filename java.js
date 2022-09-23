@@ -102,7 +102,7 @@ const testFunction = function () {
 
   city = document.querySelector("#citySearchInput").value
 
-  queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
   fetchFunction()
 
 }
