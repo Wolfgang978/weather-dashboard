@@ -25,7 +25,7 @@ let tomorrowDate = []
 
 
 const fetchFunction = function () {
-  fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}`)
+  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}`)
     .then(function (response) {
 
       return response.json();
@@ -33,7 +33,7 @@ const fetchFunction = function () {
     .then(function (data) {
       lat = data[0].lat
       lon = data[0].lon
-      queryURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
+      queryURL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
       fetch(queryURL)
         .then(function (response) {
           return response.json();
@@ -102,7 +102,7 @@ const testFunction = function () {
 
   city = document.querySelector("#citySearchInput").value
 
-  queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
   fetchFunction()
 
 }
