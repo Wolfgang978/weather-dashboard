@@ -1,0 +1,84 @@
+
+
+
+body {
+  background-color: #161b22;
+  color: white;
+  margin: 0px;
+}
+
+
+
+header {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+h2 {
+  font-size: 200%;
+}
+
+img {
+  width: 100px;
+}
+
+.allForecastSection {
+  visibility: hidden;
+  font-size: 200%;
+}
+.forecastSection {
+  padding: 25px;
+}
+#fiveDayForecast {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#searchButton, #citySearchInput {
+ font-size: 150%;
+}
+.savedCities {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0px;
+}
+.buttonClick {
+  font-size: 150%;
+}
+.currentDay {
+  visibility: hidden;
+  border: 5px solid black;
+    margin: 10px 20px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+}
+
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+#todayImage, #cityHeader {
+  flex-direction: row;
+}
+#cityHeader {
+  font-size: 150%;
+}
