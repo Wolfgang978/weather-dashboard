@@ -25,7 +25,7 @@ let tomorrowDate = []
 
 
 const fetchFunction = function () {
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}`)
+  fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKey}`)
     .then(function (response) {
 
       return response.json();
@@ -33,7 +33,7 @@ const fetchFunction = function () {
     .then(function (data) {
       lat = data[0].lat
       lon = data[0].lon
-      queryURL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
+      queryURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
       fetch(queryURL)
         .then(function (response) {
           return response.json();
@@ -67,7 +67,7 @@ const fetchFunction = function () {
           }
 
           cityHeader.textContent = `${data.city.name} ${todayDate}`
-          todayImage.src = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`
+          todayImage.src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`
           currentCity1.textContent = `Temp: ${data.list[0].main.temp} °F`
           currentCity2.textContent = `Wind: ${data.list[0].wind.speed} MPH`
           currentCity3.textContent = `Humidity: ${data.list[0].main.humidity}`
@@ -85,7 +85,7 @@ const fetchFunction = function () {
             tomorrowDate[i] = moment().add(i, 'days').format("MM/DD/YYYY")
 
             fiveDayForecast.children[i - 1].children[0].textContent = tomorrowDate[i]
-            fiveDayForecast.children[i - 1].children[1].src = `http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`
+            fiveDayForecast.children[i - 1].children[1].src = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`
             fiveDayForecast.children[i - 1].children[2].textContent = `Temp: ${data.list[i].main.temp} °F`
             fiveDayForecast.children[i - 1].children[3].textContent = `Wind: ${data.list[i].wind.speed} MPH`
             fiveDayForecast.children[i - 1].children[4].textContent = `Humidity: ${data.list[i].main.humidity}`
@@ -102,7 +102,7 @@ const testFunction = function () {
 
   city = document.querySelector("#citySearchInput").value
 
-  queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
   fetchFunction()
 
 }
