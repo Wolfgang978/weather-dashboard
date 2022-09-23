@@ -119,8 +119,9 @@ function renderLastRegistered() {
     appendedArray.setAttribute("class", "buttonClick")
   }
 }
-
-renderLastRegistered()
+if (localStorage.getItem("input1")){
+  renderLastRegistered()
+}
 
 $(document).on("click", '.buttonClick', function () {
   allForecastSection.setAttribute("style", "visibility: visible;")
